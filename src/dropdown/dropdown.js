@@ -220,7 +220,9 @@ angular.module('ui.bootstrap.dropdown', ['ui.bootstrap.position'])
       self.selectedOption = null;
     }
 
-    setIsOpen($scope, isOpen);
+    if (setIsOpen) {
+      setIsOpen($scope, isOpen);
+    }
   });
 
   $scope.$on('$locationChangeSuccess', function() {
